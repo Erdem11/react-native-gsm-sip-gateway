@@ -3,9 +3,6 @@ workflows:
     name: React Native Android
     max_build_duration: 120
     instance_type: mac_mini_m2
-    environment:
-      android_signing:
-        - my_keystore  # اسم ملف Keystore الذي ستضيفه لاحقًا في Codemagic
     scripts:
       - name: Clone dependencies
         script: |
