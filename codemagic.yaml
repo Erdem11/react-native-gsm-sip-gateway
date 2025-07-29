@@ -3,17 +3,19 @@ workflows:
     name: React Native Android
     max_build_duration: 120
     instance_type: mac_mini_m2
-    scripts:
-      - name: Clone local modules
-        script: |
-          git clone https://github.com/telon-org/react-native-tele.git react-native-tele
-          git clone https://github.com/telon-org/react-native-sip2.git react-native-sip2
-          git clone https://github.com/telon-org/react-native-replace-dialer.git react-native-replace-dialer
 
-      - name: Set Yarn version to 3
+    scripts:
+      - name: Clone dependencies
+        script: |
+          git clone https://github.com/telon-org/react-native-tele.git ../react-native-tele
+          git clone https://github.com/telon-org/react-native-sip2.git ../react-native-sip2
+          git clone https://github.com/telon-org/react-native-replace-dialer.git ../react-native-replace-dialer
+
+      - name: Set Yarn version and disable immutable installs
         script: |
           corepack enable
           yarn set version 3.6.4
+          yarn config set enableImmutableInstalls false
           yarn --version
 
       - name: Install dependencies
