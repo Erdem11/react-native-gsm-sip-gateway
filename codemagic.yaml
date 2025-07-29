@@ -10,7 +10,7 @@ workflows:
           git clone https://github.com/telon-org/react-native-sip2.git ../react-native-sip2
           git clone https://github.com/telon-org/react-native-replace-dialer.git ../react-native-replace-dialer
       - name: Install dependencies
-        script: yarn install
+        script: yarn install --immutable=false
       - name: Set Android SDK location
         script: |
           echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/android/local.properties"
