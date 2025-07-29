@@ -9,14 +9,24 @@ workflows:
           git clone https://github.com/telon-org/react-native-tele.git ../react-native-tele
           git clone https://github.com/telon-org/react-native-sip2.git ../react-native-sip2
           git clone https://github.com/telon-org/react-native-replace-dialer.git ../react-native-replace-dialer
+
+      - name: Set Yarn version to 3
+        script: |
+          corepack enable
+          yarn set version 3.6.4
+          yarn --version
+
       - name: Install dependencies
         script: yarn install --immutable=false
+
       - name: Set Android SDK location
         script: |
           echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/android/local.properties"
+
       - name: Build Android release
         script: |
           cd android
           ./gradlew assembleRelease
+
     artifacts:
       - android/app/build/outputs/apk/release/*.apk
