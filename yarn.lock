@@ -1094,7 +1094,7 @@
     wcwidth "^1.0.1"
     yaml "^2.2.1"
 
-"@react-native-community/cli-platform-android@18.0.0":
+"@react-native-community/cli-platform-android@18.0.0", "@react-native-community/cli-platform-android@^18.0.0":
   version "18.0.0"
   resolved "https://registry.yarnpkg.com/@react-native-community/cli-platform-android/-/cli-platform-android-18.0.0.tgz#6bc69b0cccaa8d8138d31eb9b449e17528cd8f63"
   integrity sha512-3Y3RleN/des1C3oRS6s6fDvFYKN0KwsLrYFRpVx9vzdDnH1OGyFJOy4DbrruSPtdNiHUpvvHnOOxeLMj0+/tmw==
@@ -4975,7 +4975,7 @@ react-native-permissions@^4.1.5:
   integrity sha512-r6VMRacASmtRHS+GZ+5HQCp9p9kiE+UU9magHOZCXZLTJitdTuVHWZRrb4v4oqZGU+zAp3mZhTQftuMMv+WLUg==
 
 "react-native-replace-dialer@file:react-native-replace-dialer":
-  version "0.0.11"
+  version "0.0.0"
 
 "react-native-replace-dialer@https://github.com/telon-org/react-native-replace-dialer":
   version "0.0.11"
