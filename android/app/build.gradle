@@ -121,6 +121,7 @@ def enableHermes = project.ext.react.get("enableHermes", false);
 
 android {
     namespace "one.telefon.gateway"
+    compileSdkVersion 34  // veya kullandığın SDK sürümü
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     compileOptions {
@@ -130,8 +131,8 @@ android {
 
     defaultConfig {
         applicationId "one.telefon.gateway"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        minSdkVersion 21
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
     }
