@@ -17,7 +17,7 @@ workflows:
           yarn --version
 
       - name: Install dependencies
-        script: yarn install --immutable=false
+        script: yarn install
 
       - name: Set Android SDK location
         script: |
