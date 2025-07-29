@@ -20,8 +20,8 @@
     "react-native": "0.80.0",
     "react-native-console-panel": "^0.1.0",
     "react-native-device-info": "^10.12.0",
-    "react-native-replace-dialer": "file:../react-native-replace-dialer",
-    "react-native-sip2": "file:../react-native-sip2",
+    "react-native-replace-dialer": "git+https://github.com/telon-org/react-native-replace-dialer.git",
+    "react-native-sip2": "git+https://github.com/telon-org/react-native-sip2.git",
     "react-native-tele": "git+https://github.com/telon-org/react-native-tele.git"
   },
   "devDependencies": {
