@@ -1,7 +1,9 @@
 rootProject.name = 'teleexample'
 include ':react-native-sip2'
 project(':react-native-sip2').projectDir = new File(rootProject.projectDir, '../../../modules/react-native-sip2/android')
+include ':sip2-android-core'  // Bu satır mutlaka olmalı
+project(':sip2-android-core').projectDir = new File(rootProject.projectDir, '../react-native-sip2/android/sip2-android-core')
 include ':react-native-tele'
 project(':react-native-tele').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-tele/android/app')
-apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+apply from: new File(rootDir, "../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
 include ':app'
